@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Health Care</title>
+	<style type="text/css">
+		.my{
+			height: 100px;
+			width :50%;
+		}
+		.dis{
+			background-color: red;
+			height: 100px;
+			width :20%;
+			float: left;
+			margin-left: 350px;
+		}
+		.med{
+			background-color: pink;
+			height: 100px;
+			width :20%;
+			float: none;
+			margin-left: 230px;
+		}
+		.mybt{
+			background-color: blue;
+			color: white;
+		}
+	</style>
+</head>
+<body><center>
+	<marquee width="100%" direction="left" height="30px" scrollamount="12" bgcolor="lightcyan">It's a kratin Website !!! Where You can check your health status</marquee>
+
+	<fieldset  style="background-color: yellow"><legend><b>HealthCare</b></legend>
+	<div class="my"><br>
+		Enter Your Age :<input type="text" id="txt"><br><br>
+		<button class="mybt" onclick="show()">Check Your Health</button>
+	</div>
+	<div class="dis"><b>Disease :</b><br><label id="myarea"></label></div>
+	<div class="med"><b>Medic :</b><br><label id="mymed"></label></div></center>
+	</fieldset>
+	<script type="text/javascript">
+
+			function show(){
+
+					var no=parseInt(Math.round(document.getElementById('txt').value));
+
+					if(no>=65 && no<=105){
+						document.getElementById("myarea").innerHTML="Diabetic , BP , Heart Attack";
+						document.getElementById("mymed").innerHTML="Walk atleast 30 mins per day"+"<br>"+"Take your meal on time ";
+					}
+					else if(no>=45 && no<=64){
+						document.getElementById("myarea").innerHTML="Preacaution is better than cure";
+						document.getElementById("mymed").innerHTML="No Disease ,no medic";
+					}
+					else{
+						alert("You are still fit and fine");
+						document.getElementById("myarea").innerHTML="";
+						document.getElementById("mymed").innerHTML="";
+
+					}
+			}
+	</script>
+</body>
+</html>
